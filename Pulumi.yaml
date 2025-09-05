@@ -1,0 +1,30 @@
+name: demo-project-3
+description: An AWS Python Pulumi program for provisioning an RDS MariaDB database and an EC2 instance.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
+
+template:
+  config:
+    aws:region:
+      description: AWS region to deploy into
+      default: ap-southeast-1
+    dbName:
+      description: Database name for MariaDB
+      default: appdb
+    dbUser:
+      description: Username for the MariaDB database
+      default: appuser
+    dbPass:
+      description: Password for the MariaDB database user
+      default: Abcd!234
+    sshKeyName:
+      description: SSH key pair name for the EC2 instance
+      default: master-key

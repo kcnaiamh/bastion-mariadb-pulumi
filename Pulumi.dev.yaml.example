@@ -1,0 +1,6 @@
+config:
+  demo-project-3:dbName: appdb
+  demo-project-3:dbUser: appuser
+  demo-project-3:dbPass:
+    secure: AAABAKHQIDlqidTIkCxKfOTWXHVXiZAMaEVLkh1kZwJpAR/QvQaIVg==
+  demo-project-3:sshKeyName: master-key
