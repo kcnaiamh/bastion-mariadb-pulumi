@@ -12,6 +12,9 @@ The primary goal is to create a robust, automated, and secure deployment solutio
 
 This is the top level overview of the whole infrastructure that the code will build.
 
+<img width="1484" height="1209" alt="image" src="https://github.com/user-attachments/assets/860c880e-1d77-4857-85a8-087a72a1ad4c" />
+
+
 ## Technologies Used
 
 - **Programming & Scripting Languages:**
