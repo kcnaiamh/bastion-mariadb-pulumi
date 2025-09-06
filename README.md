@@ -49,7 +49,8 @@ To deploy the infrastructure and services you just need to run 2 commands.
    pulumi new https://github.com/kcnaiamh/bastion-mariadb-pulumi
    ```
 
-   ![[Pasted image 20250905162411.png]]
+   <img width="950" height="450" alt="image" src="https://github.com/user-attachments/assets/ff4b71c4-a199-4def-8cb8-6d9a75f10789" />
+
 
 1. **Run Pulumi Up**. This command will provision the AWS resources as defined in `__main__.py`.
 
@@ -57,21 +58,25 @@ To deploy the infrastructure and services you just need to run 2 commands.
    pulumi up --yes
    ```
 
-   ![[Pasted image 20250905152224.png]]
+   <img width="878" height="423" alt="image" src="https://github.com/user-attachments/assets/797c4ad8-2a63-45ee-aaf6-8013d653a4af" />
+
 
    It will take 3/4 minute for provisioning the AWS infrastructure.
 
    Now to get into bastion server just run `ssh bastion-server` in your terminal.
 
-   ![[Pasted image 20250905152656.png]]
+   <img width="681" height="782" alt="image" src="https://github.com/user-attachments/assets/340c4e41-18b1-4b28-bf3f-d411d8dca1a4" />
+
 
    Also, to get into database server run `ssh db-server` in your another terminal.
 
-   ![[Pasted image 20250905152807.png]]
+   <img width="739" height="846" alt="image" src="https://github.com/user-attachments/assets/bc227628-a8ab-49eb-80ca-92c419828902" />
+
 
 1. **Do the Cleanup**. Run `pulumi destroy --yes --remove` to delete the whole infrastructure. (Be cautious about AWS bill.)
 
-   ![[Pasted image 20250905155030.png]]
+   <img width="723" height="568" alt="image" src="https://github.com/user-attachments/assets/86312199-d8f3-4bc4-8b6d-6b2a08286617" />
+
 
 ## Security Considerations
 
@@ -128,19 +133,22 @@ During the automation process, I encountered several challenges. In this section
 pulumi stack output
 ```
 
-![[Pasted image 20250905152447.png]]
+<img width="901" height="81" alt="image" src="https://github.com/user-attachments/assets/63992f19-f74f-4c02-9e7c-390a1579a7dd" />
+
 
 ```
 systemctl status mariadb
 ```
 
-![[Pasted image 20250905152916.png]]
+<img width="770" height="352" alt="image" src="https://github.com/user-attachments/assets/4b21d115-9e66-4709-a0d6-f76318fbf8c5" />
+
 
 ```
 mysql -h <db-private-ip> -u appuser -p -e "SHOW DATABASES;"
 ```
 
-![[Pasted image 20250905153015.png]]
+<img width="694" height="183" alt="image" src="https://github.com/user-attachments/assets/fc80d94b-c4e1-4714-a495-9c4290b32169" />
+
 
 ---
 
